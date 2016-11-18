@@ -1,14 +1,14 @@
 #include <stdio.h>
-
-void printRegs() {
-        printf("eax=%08x\tesp=%08x\n", eax(), esp());
-        printf("ebx=%08x\tebp=%08x\n", ebx(), ebp());
-}
+#include "dat.h"
+#include "fns.h"
 
 int main() {
-        printf("xxx v0.0.1\n");
+        Reg reg;
 
-        printRegs();
+        newreg(&reg);
+
+        printRegs32(&reg);
+        printRegs16(&reg);
 
         return 0;
 }
