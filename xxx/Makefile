@@ -6,7 +6,7 @@ $(TARGET):
 	smlrcc main.c regs.c -I./include -o $(TARGET)
 
 debug:
-	gdb 	-ex "set architecture 386:386" \
+	gdb 	-ex "set architecture i386:intel" \
 		-ex "set disassembly-flavor intel" \
 		-ex "layout asm" -ex "layout regs" \
 		-ex "br *0x80490b0" \
