@@ -28,21 +28,21 @@ void newreg(Reg *reg) {
 }
 
 void printRegs32(Reg *reg) {
-        printf("eax=%08x\tesp=%08x\n", reg->eax, 0);
-        printf("ebx=%08x\tebp=%08x\n", reg->ebx, reg->ebp);
-        printf("ecx=%08x\tesi=%08x\n", reg->ecx, reg->esi);
-        printf("edx=%08x\tedi=%08x\n", reg->edx, reg->edi);
+        printf("eax=%08x    esp=%08x\n", reg->eax, 0);
+        printf("ebx=%08x    ebp=%08x\n", reg->ebx, reg->ebp);
+        printf("ecx=%08x    esi=%08x\n", reg->ecx, reg->esi);
+        printf("edx=%08x    edi=%08x\n", reg->edx, reg->edi);
         printf("eip=%08x\n", reg->eip);
 }
 
 void printRegs16(Reg *reg) {
-        printf("ax=%04x\tsp=%04x\n", LSW(reg->eax) , LSW(reg->esp));
-        printf("bx=%04x\tbp=%04x\n", LSW(reg->ebx) , LSW(reg->ebp));
-        printf("cx=%04x\tsi=%04x\n", LSW(reg->ecx) , LSW(reg->esi));
-        printf("dx=%04x\tdi=%04x\n", LSW(reg->edx) , LSW(reg->edi));
+        printf("ax=%04x         sp=%04x\n", LSW(reg->eax) , LSW(reg->esp));
+        printf("bx=%04x         bp=%04x\n", LSW(reg->ebx) , LSW(reg->ebp));
+        printf("cx=%04x         si=%04x\n", LSW(reg->ecx) , LSW(reg->esi));
+        printf("dx=%04x         di=%04x\n", LSW(reg->edx) , LSW(reg->edi));
 
-        printf("cs=%04x\tds=%04x\n", reg->cs , reg->ds);
-        printf("es=%04x\tfs=%04x\n", reg->es, reg->fs);
+        printf("cs=%04x         ds=%04x\n", reg->cs , reg->ds);
+        printf("es=%04x         fs=%04x\n", reg->es, reg->fs);
         printf("gs=%04x\n", reg->gs);
 
 }
